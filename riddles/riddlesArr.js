@@ -1,19 +1,16 @@
-import Riddle from "../classes/Riddle.js"; 
-import r1 from './r1.js';
-import r2 from './r2.js';
-import r3 from './r3.js';
+import { loadRiddles } from './riddlesData.js';
+import Riddle from '../classes/Riddle.js';
 
-// Initialize and export an array of Riddle instances from imported riddle data
+// Load riddle objects from the data file
+const riddleObjects = loadRiddles();
 
-const riddles = [r1, r2, r3];
-
-const allRiddles = riddles.map(r => {
-    return new Riddle(
-        r.id,
-        r.name,
-        r.taskDescription,
-        r.correctAnswer
-    );
-});
+// Convert each plain riddle object into a Riddle class instance
+const allRiddles = riddleObjects.map(r => new Riddle(
+  r.id,
+  r.name,
+  r.taskDescription,
+  r.correctAnswer
+));
 
 export default allRiddles;
+
