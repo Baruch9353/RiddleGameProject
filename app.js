@@ -3,6 +3,8 @@ import Player from "./classes/Player.js";
 import riddles from "./riddles/riddlesArr.js";
 import timeWrapper from "./utils/timer.js";
 
+
+
 // Starting the game
 const playerName = question("What is your name? ");
 console.log(`Hi ${playerName}!\nWelcome to the Riddle Game!`);
@@ -15,3 +17,6 @@ for (const riddle of riddles) {
 }
 
 player.showStats();
+
+
+
