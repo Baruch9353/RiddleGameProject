@@ -1,14 +1,12 @@
-import fs from 'fs';
+const url = 'http://localhost:3000/riddles';
 
-const filePath = './riddles/db.txt';
-
-// Reads and parses riddles from the JSON file
-export function loadRiddles() {
+export async function loadRiddles() {
   try {
-    const data = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(data);
+    const res = await fetch(url);
+    const data = await res.json();
+    return data;
   } catch (error) {
-    console.log(error);
+    console.error('Error loading riddles:', error);
     return [];
   }
 }

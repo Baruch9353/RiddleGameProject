@@ -1,7 +1,7 @@
 import Riddle from '../classes/Riddle.js';
 import { loadRiddles } from './riddlesData.js';
 
-const rawRiddles = loadRiddles();
+const rawRiddles = await loadRiddles();
 
 // create an instance of Riddle for each riddle in rawRiddles
 
