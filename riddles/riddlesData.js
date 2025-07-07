@@ -13,11 +13,4 @@ export function loadRiddles() {
   }
 }
 
-// Saves the riddles array back to the JSON file, formatted nicely (2)
-export function saveRiddles(riddles) {
-  try {
-    fs.writeFileSync(filePath, JSON.stringify(riddles, null, 2), 'utf-8');
-  } catch (error) {
-    console.log(error);
-  }
-}
+
