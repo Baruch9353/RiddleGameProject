@@ -7,7 +7,9 @@ import timeWrapper from "./utils/timer.js";
 
 // Starting the game
 const playerName = question("What is your name? ");
-console.log(`Hi ${playerName}!\nWelcome to the Riddle Game!`);
+console.log(`Hi ${playerName}!
+Welcome to the Riddle Game!
+===========================`);
 
 const player = new Player(playerName);
 
